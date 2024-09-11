@@ -67,16 +67,16 @@
         <div class="section mt-1" id="menu-section">
             <div class="card">
                 <div class="card-body " style="margin-left: 100px">
-                            <h2>Nama    : {{Auth::guard('siswa')->user()->nama_siswa}}</h2>
-                            <h2>NISN    : {{Auth::guard('siswa')->user()->nisn}}</h2>
-                            <h2>Kelas   : {{Auth::guard('siswa')->user()->kode_kelas}}</h2>
+                            <h4>Nama    : {{Auth::guard('siswa')->user()->nama_siswa}}</h4>
+                            <h4>NISN    : {{Auth::guard('siswa')->user()->nisn}}</h4>
+                            <h4>Kelas   : {{Auth::guard('siswa')->user()->kode_kelas}}</h4>
                 </div>
             </div>
         </div>
 
         <div class="section" id="presence-section">
             <div class="todaypresence">
-                <div class="row" style="margin-top: 150px">
+                <div class="row" style="margin-top: 90px">
                     <div class="col text-center">
                         <div class="col mt-3">
                             @php
@@ -99,36 +99,35 @@
                 @if($datavotting == null)
                 <div class="row mt-2">
                     <div class="col text-center">
-                        <h3 style="font-size: 2.3vw">CALON KETUA OSIS MASA BAKTI 2024/2025</h3>
+                        <h2>CALON KETUA OSIS</h2>
                     </div>
                 </div>
                 <div class="row justify-content-center mb-3">
-                    <div class="col-4 mb-3">
-                        <div class="card ">
+                    <div class="col-6 mb-3">
+                        <div class="card" style="height: 1000px">
                             <div class="card-body">
                                 <div class="presencecontent">
                                     <div class="presencedetail text-center card-image">
                                         <a href="/2y$10$3VyqbLw48PWw4Oq7cSkqFu5nOGgbMnks4PY7XDD8tVcxyza0Kh62a">
-                                            <img src="{{asset('foto/barong.png')}}" alt="foto_barong" width="100%" height="100%">
+                                            <img src="{{asset('foto/calon1.png')}}" alt="foto_calon1" width="100%" height="100%">
                                         </a>
-                                        <h3 class="text-center" style="font-size: 2vw">BARONG <br> CALON KETUA OSIS</h3>
-                                        <h4 style="font-size: 1.5vw">Identitas Lainnya</h4>
+                                        {{-- <h3 class="text-center">Calon 01 <br> CALON KETUA OSIS</h3> --}}
+                                        <h3 class="text-center">A.A. Gede Agung Adinata Prabawa</h3>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-1"></div>
-                    <div class="col-4 mb-3">
+                    <div class="col-6 mb-3">
                         <div class="card">
                             <div class="card-body">
                                 <div class="presencecontent">
                                     <div class="presencedetail text-center card-image">
                                         <a href="/2y$10$3VyqbLw48PWw4Oq8cSkqFu5nOGgbMnks4PY7XDD8tVcxyza0Kh62a">
-                                            <img src="{{asset('foto/rangda.png')}}" alt="foto_rangda" width="100%" height="100%">
+                                            <img src="{{asset('foto/calon2.png')}}" alt="foto_calon2" width="100%" height="100%">
                                         </a>
-                                        <h3 class="text-center" style="font-size: 2vw">RANGDA <br> CALON KETUA OSIS</h3>
-                                        <h4 style="font-size: 1.5vw">Identitas Lainnya</h4>
+                                        {{-- <h3 class="text-center">Calon 02 </h3> --}}
+                                        <h3 class="text-center">Kadek Rangga Cahyadi </h3>
                                     </div>
                                 </div>
                             </div>

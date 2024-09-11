@@ -82,7 +82,7 @@
             <div class="todaypresence">
                 <div class="row mt-2">
                     <div class="col text-center">
-                        <h3 style="font-size: 2rem">CALON KETUA OSIS MASA BAKTI 2024/2025</h3>
+                        <h3 style="font-size: 3rem">CALON KETUA OSIS</h3>
                     </div>
                 </div>
                 <div class="row justify-content-center mt-3">
@@ -91,7 +91,7 @@
                             <div class="card-body">
                                 <div class="presencecontent">
                                     <div class="presencedetail text-center card-image ">
-                                            <img src="{{asset('foto/barong.png')}}" class="card-img-top" alt="foto_barong" width="50%" height="50%">
+                                            <img src="{{asset('foto/calon1.png')}}" class="card-img-top" alt="foto_barong" width="50%" height="50%">
                                         <h3 class="text-center" style="font-size: 2rem">BARONG</h3>
                                         <div class="card text-center border" style="border-radius: 5px 30px 5px 30px; display:flex" >
                                             <div class="card-body">
@@ -109,8 +109,9 @@
                             <div class="card-body">
                                 <div class="presencecontent">
                                     <div class="presencedetail text-center card-image">
-                                            <img src="{{asset('foto/rangda.png')}}" class="card-img-top" alt="foto_rangda" width="50%" height="50%">
-                                        <h3 class="text-center" style="font-size: 2rem">RANGDA </h3>
+                                            <img src="{{asset('foto/calon2.png')}}" class="card-img-top" alt="foto_rangda" width="50%" height="50%">
+                                        {{-- <h3 class="text-center" style="font-size: 2rem">Calon 1 </h3> --}}
+                                        <h3 class="text-center" style="font-size: 2rem">A.A. Gede Agung Adinata Prabawa </h3>
                                         <div class="card text-center border" style="border-radius: 30px 5px 30px 5px; display:flex">
                                             <div class="card-body">
                                                 <h5 class="card-title kakul" style="font-size: 3rem">{{$calon2}}</h5>
