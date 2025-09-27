@@ -9,6 +9,16 @@ use Illuminate\Support\Facades\Redirect;
 
 class DashboardController extends Controller
 {
+    // Endpoint untuk live update perolehan suara
+    public function liveVote()
+    {
+        $calon1 = \DB::table('votting')->where('votting', '1')->count();
+        $calon2 = \DB::table('votting')->where('votting', '2')->count();
+        return response()->json([
+            'calon1' => $calon1,
+            'calon2' => $calon2
+        ]);
+    }
     public function index(){
         $nisn = Auth::guard('siswa')->user()->nisn;
         $datavotting = DB::table('votting')->where('nisn',$nisn)->count();

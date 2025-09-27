@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 
@@ -21,16 +20,142 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
     <link rel="manifest" href="__manifest.json">
-    <script>
-        function autoRefresh() {
-            window.location = window.location.href;
-        }
-        setInterval('autoRefresh()', 20000);
-    </script>
+
 </head>
 
 <body style="background-color:#e9ecef;">
     <style>
+        .candidate-card-admin {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            min-width: 0;
+            max-width: 100%;
+            margin: 0;
+            border-radius: 20px;
+            box-shadow: 0 4px 18px rgba(25,118,210,0.10);
+            background: #fff;
+        }
+        .candidate-card-admin .card-body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2vw 1vw 1.5vw 1vw;
+        }
+        /* CSS untuk foto candidate dihapus */
+        .candidate-card-admin h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #1976d2;
+            margin-bottom: 8px;
+            margin-top: 0;
+            text-align: center;
+        }
+        .candidate-card-admin .card-title.kakul {
+            font-size: 2.2rem !important;
+            font-weight: 700;
+            color: #222;
+            margin: 0;
+            text-align: center;
+        }
+        .candidate-card-admin .card.border {
+            margin-top: 8px;
+            margin-bottom: 0;
+            border-radius: 12px;
+        }
+        html, body {
+            min-height: 100vh;
+        }
+        #appCapsule {
+            min-height: 100vh;
+        }
+        .section, .todaypresence {
+            padding-top: 0.5vw !important;
+            padding-bottom: 0.5vw !important;
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+        }
+        .row.candidate-row {
+            gap: 2px;
+        }
+        .candidate-card-admin {
+            min-width: 0;
+            max-width: 100%;
+            width: 100%;
+            border-radius: 12px;
+        }
+        .candidate-card-admin .card-body {
+            padding: 1vw 1vw 1vw 1vw;
+        }
+        .candidate-card-admin img {
+            max-width: 10vw;
+            min-width: 50px;
+            margin-bottom: 1vw;
+        }
+        h1, h2, h3, h5, span, .btn {
+            font-size: clamp(0.8rem, 2vw, 1.2rem) !important;
+        }
+        .footer {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 25px;
+        }
+        .row.candidate-row {
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 2px;
+        }
+        .candidate-col {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+        }
+        .candidate-card-admin {
+            width: 100%;
+            min-width: 0;
+            max-width: 100%;
+            margin: 0;
+            border-radius: 20px;
+            box-shadow: 0 4px 18px rgba(25,118,210,0.10);
+        }
+        .candidate-card-admin .card-body {
+            padding: 3vw 2vw 2vw 2vw;
+        }
+        .candidate-card-admin img {
+            max-width: 18vw;
+            min-width: 70px;
+            margin-bottom: 2vw;
+        }
+        @media (max-width: 900px) {
+            .row.candidate-row {
+                flex-direction: column;
+                gap: 18px 0;
+            }
+            .candidate-col {
+                width: 100%;
+            }
+            .candidate-card-admin {
+                width: 100%;
+                max-width: 100%;
+            }
+            .candidate-card-admin img {
+                max-width: 30vw;
+            }
+        }
+        @media (max-width: 900px) {
+            .row.candidate-row {
+                flex-direction: column;
+                gap: 18px 0;
+            }
+            .candidate-col {
+                width: 100%;
+            }
+        }
         .card-image {
         width: 50%;
         height: auto;
@@ -67,7 +192,7 @@
                 </div>
                 <div id="user-info">
                     <h2 id="user-name">PEMILIHAN OSIS SMAN 1 GIANYAR</h2>
-                    <span id="user-role">2024/2025</span>
+                    <span id="user-role">2025/2026</span>
                 </div>
             </div>
         </div>
@@ -86,17 +211,17 @@
                         <h3 style="font-size: 3rem">CALON KETUA OSIS</h3>
                     </div>
                 </div>
-                <div class="row justify-content-center mt-3">
-                    <div class="col-6 mb-3">
-                        <div class="card ">
+                <div class="row candidate-row justify-content-center mt-3">
+                    <div class="col-6 candidate-col mb-3">
+                        <div class="card candidate-card-admin">
                             <div class="card-body">
                                 <div class="presencecontent">
-                                    <div class="presencedetail text-center card-image ">
-                                            <img src="{{asset('foto/calon1.png')}}" class="card-img-top" alt="foto_barong" width="50%" height="50%">
-                                        <h3 class="text-center" style="font-size: 2rem">BARONG</h3>
-                                        <div class="card text-center border" style="border-radius: 5px 30px 5px 30px; display:flex" >
+                                    <div class="presencedetail text-center card-image">
+                                        <img src="{{asset('foto/calon1.png')}}" class="card-img-top" alt="foto_barong">
+                                        <h3 class="text-center" style="font-size: 1.2rem; margin-bottom: 10px;">NAMA LENGKAP CALON 1</h3>
+                                        <div class="card text-center border" style="border-radius: 5px 30px 5px 30px; display:flex">
                                             <div class="card-body">
-                                                <h5 class="card-title kakul" style="font-size: 3rem">{{$calon1}}</h5>
+                                                <h5 class="card-title kakul" style="font-size: 2rem;">{{$calon1}}</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -104,18 +229,16 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-6 mb-3">
-                        <div class="card">
+                    <div class="col-6 candidate-col mb-3">
+                        <div class="card candidate-card-admin">
                             <div class="card-body">
                                 <div class="presencecontent">
                                     <div class="presencedetail text-center card-image">
-                                            <img src="{{asset('foto/calon2.png')}}" class="card-img-top" alt="foto_rangda" width="50%" height="50%">
-                                        {{-- <h3 class="text-center" style="font-size: 2rem">Calon 1 </h3> --}}
-                                        <h3 class="text-center" style="font-size: 2rem">A.A. Gede Agung Adinata Prabawa </h3>
+                                        <img src="{{asset('foto/calon2.png')}}" class="card-img-top" alt="foto_rangda">
+                                        <h3 class="text-center" style="font-size: 1.2rem; margin-bottom: 10px;">NAMA LENGKAP CALON 2</h3>
                                         <div class="card text-center border" style="border-radius: 30px 5px 30px 5px; display:flex">
                                             <div class="card-body">
-                                                <h5 class="card-title kakul" style="font-size: 3rem">{{$calon2}}</h5>
+                                                <h5 class="card-title kakul" style="font-size: 2rem;">{{$calon2}}</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -125,7 +248,7 @@
                     </div>
                 </div>
 
-                <div class="row justify-content-center">
+                <div class="row justify-content-center" margin-bottom="20px">
                     <a href="/admin/proseslogoutadmin" class="btn btn-info btn-lg mt-2">LOG_OUT</a>
                 </div>
 
@@ -158,6 +281,27 @@
     <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
     <!-- Base Js File -->
     <script src="{{asset('assets/js/base.js')}}"></script>
+
+    <!-- Live Vote AJAX Polling -->
+    <script>
+        function updateLiveVote() {
+            $.ajax({
+                url: '/admin/live-vote',
+                method: 'GET',
+                dataType: 'json',
+                success: function(data) {
+                    if (data && typeof data.calon1 !== 'undefined' && typeof data.calon2 !== 'undefined') {
+                        $(".card-title.kakul").eq(0).text(data.calon1);
+                        $(".card-title.kakul").eq(1).text(data.calon2);
+                    }
+                }
+            });
+        }
+        setInterval(updateLiveVote, 3000);
+        $(document).ready(function() {
+            updateLiveVote();
+        });
+    </script>
 
 
 </body>

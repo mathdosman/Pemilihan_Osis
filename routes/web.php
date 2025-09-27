@@ -1,3 +1,4 @@
+
 <?php
 
 use Illuminate\Support\Facades\Route;
@@ -56,5 +57,7 @@ Route::middleware(['auth:siswa'])->group(function(){
 Route::middleware(['auth:user'])->group(function(){
     Route::get('/admin/dashboardadmin',[DashboardController::class,'dashboardadmin']);
     Route::get('/admin/proseslogoutadmin', [AuthController::class, 'proseslogoutadmin']);
+    // Live vote count for admin dashboard
+    Route::get('/admin/live-vote', [\App\Http\Controllers\DashboardController::class, 'liveVote'])->middleware('auth:user');
 
 });
