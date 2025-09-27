@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Hash;
 class AuthController extends Controller
 {
     public function proseslogin(Request $request){
-        // $password = 1234;
+        // $password = 123456;
         // echo Hash::make($password);
         if(Auth::guard('siswa')->attempt(['nisn'=>$request->nisn, 'password'=>$request->password])){
             return redirect('/dashboard');
@@ -33,6 +33,9 @@ class AuthController extends Controller
     }
 
     public function prosesloginadmin(Request $request){
+        // $password = 123456;
+        // echo Hash::make($password);
+        // dd($password);
         if(Auth::guard('user')->attempt(['email'=>$request->email, 'password'=>$request->password])){
             return redirect('/admin/dashboardadmin');
         }else{
