@@ -11,6 +11,7 @@ class AuthController extends Controller
     public function proseslogin(Request $request){
         // $password = 123456;
         // echo Hash::make($password);
+        // dd($password);
         if(Auth::guard('siswa')->attempt(['nisn'=>$request->nisn, 'password'=>$request->password])){
             return redirect('/dashboard');
         }else{
