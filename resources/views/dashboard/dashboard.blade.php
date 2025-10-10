@@ -525,7 +525,7 @@
                         <a href="/2y$10$3VyqbLw48PWw4Oq7cSkqFu5nOGgbMnks4PY7XDD8tVcxyza0Kh62a">
                             <img src="{{asset('foto/calon1.png')}}" alt="foto_calon1" class="candidate-img calon-vote" data-href="/2y$10$3VyqbLw48PWw4Oq7cSkqFu5nOGgbMnks4PY7XDD8tVcxyza0Kh62a" data-nama="Nama Lengkap Pasangan Calon 1">
                         </a>
-                        <h4 class="mt-2 nama-calon">Nama Lengkap Pasangan Calon 1</h4>
+                        <h4 class="mt-2 nama-calon">Nama Lengkap Pasangan Calon 01</h4>
                     </div>
                 </div>
             </div>
@@ -536,7 +536,7 @@
                         <a href="/2y$10$3VyqbLw48PWw4Oq8cSkqFu5nOGgbMnks4PY7XDD8tVcxyza0Kh62a">
                             <img src="{{asset('foto/calon2.png')}}" alt="foto_calon2" class="candidate-img calon-vote" data-href="/2y$10$3VyqbLw48PWw4Oq8cSkqFu5nOGgbMnks4PY7XDD8tVcxyza0Kh62a" data-nama="Nama Lengkap Pasangan Calon 2">
                         </a>
-                        <h4 class="mt-2 nama-calon">Nama Lengkap Pasangan Calon 2</h4>
+                        <h4 class="mt-2 nama-calon">Nama Lengkap Pasangan Calon 02</h4>
                     </div>
                 </div>
             </div>
